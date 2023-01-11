@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage{amsmath,amsfonts}
+\usepackage{coqdoc}
+\usepackage{mathpartir}
+\usepackage{minibox}
+\usepackage{tabto,calc}
+
+
+% \Def\figurename{Figura}
+\def\refname{Refer\^{e}ncias}
+\def\bibname{Refer\^{e}ncias}
+
+% 
+\setlength{\textwidth}{17.5cm}                    % increase line length (page width)
+\setlength{\textheight}{24cm}                   % increase page length (page height)
+\setlength{\oddsidemargin}{-.2in}               % change page offset
+\setlength{\evensidemargin}{-.1in}              % change page offset
+\setlength{\topmargin}{-.6in}                   % change offset from page top
+%\setlength{\headsep}{15pt}                      %change space between
+%
+\hyphenation{e-xem-plo de-mons-trou com-pri-mi-das}
+
+\newcommand{\comm}[1]{\tabto{\CurrentLineWidth}\fbox{\begin{minipage}[t]{0.98\linewidth-\TabPrevPos} #1 \end{minipage}}}
+
+% \Pagestyle{empty}
+
+\begin{document}
+\bibliographystyle{alpha}
+\begin{center}
+  \Large Projeto e Análise de Algoritmos\\ 
+  \normalsize \today \\ 
+  Prof. Flávio L. C. de Moura
+\end{center}
+
+\input{paa_2022_2_mergesort.tex}
+
+% Para gerar o relatório: 
+% 1.Em um terminal digite:  coqdoc --latex --body-only paa_2022_2_mergesort.v; echo "$(tail -n +3 paa_2022_2_mergesort.tex)" > paa_2022_2_mergesort.tex 
+% 2. Em um terminal digite: pdflatex paa-2022-2-relatorio.tex *)
+
+
+\begin{thebibliography}{CLRS01}  
+\bibitem[ARdM17]{ARdM2017}
+M.~Ayala-Rinc\'on and F.L.C. de Moura.
+\newblock{\em {Applied Logic for Computer Scientists
+- computational deduction and formal proofs}}.
+\newblock UTiCS, Springer, 2017.
+
+\bibitem[BvG99]{BaGe1999}
+S.~Baase and A.~van Gelder.
+\newblock {\em {Computer Algorithms | Introduction to Design and Analysis}}.
+\newblock Addison-Wesley, 1999.
+
+\bibitem[CLRS09]{CoLeRiSt2009}
+T.~H. Cormen, C.~E. Leiserson, R.~L. Rivest, and C.~Stein.
+\newblock {\em {Introduction to Algorithms}}.
+\newblock MIT Electrical Engineering and Computer Science Series. MIT press,
+  third edition, 2009.
+\end{thebibliography}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
